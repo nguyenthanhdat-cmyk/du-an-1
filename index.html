@@ -1,1 +1,64 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scale giong shoppe</title>
+    <style>
+        .cart-btn:hover .cart-preview {
+            /* flex,de khi hien thi lai van giu nguyen gia tri hien thi luc dau, */
+            /* display: flex; */
+            opacity: 1;
+            /* visible,de co the tuong tac duoc, */
+            /* visibility: visible; */
+            scale: 1;
+        }
+
+        .cart-btn {
+            position: absolute;
+            left: 80%;
+        }
+
+        .cart-preview {
+            position: absolute;
+            /* flex van giu flex,vi co opacity 0,visibility hidden,de khong tuong tac duoc khi bi an,*/
+            display: flex;
+            min-width: 250px;
+            min-height: 120px;
+            background: #4e4e4e;
+            /* left: 0; */
+            right: 0;
+            /* scale to nho dan 0 an di, transform-origin ,de xac dinh tam,*/
+            scale: 0;
+            transform-origin: 93% top;
+            /* hieu ung chuyen tiep,khi hover vao btn icon, */
+            opacity: 0;
+            /* opacity tang tu 0 den 1 khi hover opacity 1,trong 0.5s */
+            /* de khi chi vao khong bi anh huong,vi opacity 0,khi chi vao hover van se len 1 tu tu, */
+            /* visibility: hidden; */
+            /* de khong chuyen dot ngot,chuyen tu tu trong 1s,visibility */
+            /* transition: opacity 1s, visibility 1s, scale 1s; */
+            transition: 1s;
+        }
+    </style>
+
+</head>
+
+<body>
+    scale to nho khi chi vao icon,mo khung co transition khi chi vao icon,
+    <a href="https://fullstack.f8.edu.vn/?id=70ab6f0d-00aa-417f-9b6c-1a266ac9741c">15.24 Làm hiệu ứng scale giống shopee
+        Cập nhật tháng 7 năm 2023</a>
+    <a href="https://stackblitz.com/edit/web-platform-arczem?file=index.html">code mau</a>
+
+    <div class="cart-btn">
+        <i class="fa-cart">icon gio hang</i>
+
+        <div class="cart-preview">
+            <p class="cart-message">Chua co san pham</p>
+        </div>
+    </div>
+</body>
+
+</html>
